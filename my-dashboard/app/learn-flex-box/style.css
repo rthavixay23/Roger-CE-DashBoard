@@ -1,0 +1,50 @@
+
+.root {
+    --clr-dark: black;
+    --clr-light: white;
+    --clr-accent: red;
+
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+    word-spacing: 1.5px;
+    font-family: sans-serif; /**How can I import Fonts?*/
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /**What does vh mean? vh stands for "viewport height" a value of 1vh is equal to 1% viewport height. https://web.dev/blog/viewport-units */ 
+}
+
+.container {
+    width: 80%;
+    height: 700px;
+    margin: 0 auto;
+    border: 10px solid ;
+
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    background-color: lightcoral;
+    padding: 1em; /** What is em? em means " equal to the current font size" and if 2em then 2 times the current font size*/
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    border: 10px solid red;
+    border-radius: 10px;
+
+}
+
+.container{
+    display: flex;
+}
