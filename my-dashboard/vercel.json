@@ -1,5 +1,0 @@
-{
-    "rewrites": [{ "source": "/(.*)", "destination": "/" }],
-    "buildCommand": "next build",
-    "framework": "nextjs"
-}
