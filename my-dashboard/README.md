@@ -19,12 +19,12 @@ AI Sales Assistant For The Company
 
 
 
-## How to Get Started
+# How to Get Started
 
-# Start Development
+## Start Development
 npm run dev
 
-# "Seeding Database" aka Populating your Database
+## "Seeding Database" aka Populating your Database
 npm  run seed
 
 
