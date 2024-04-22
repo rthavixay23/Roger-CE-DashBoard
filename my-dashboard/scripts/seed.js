@@ -1,4 +1,4 @@
-const { db } = require('@vercel/postgres');
+const { db } = require('@vercel/postgres'); //note: require in Node.js lets you include external modules in your code.
 const {
   invoices,
   customers,
@@ -7,6 +7,8 @@ const {
 } = require('../app/lib/placeholder-data.js');
 const bcrypt = require('bcrypt');
 
+
+//Creating A USER Table
 async function seedUsers(client) {
   try {
     await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
@@ -34,7 +36,7 @@ async function seedUsers(client) {
       }),
     );
 
-    console.log(`Seeded ${insertedUsers.length} users`);
+    console.log(`Seeded ${insertedUsers.length} users`); // prints out how many users there are
 
     return {
       createTable,
@@ -46,6 +48,8 @@ async function seedUsers(client) {
   }
 }
 
+
+//Create an Invoice Table
 async function seedInvoices(client) {
   try {
     await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
@@ -63,9 +67,9 @@ async function seedInvoices(client) {
 
     console.log(`Created "invoices" table`);
 
-    // Insert data into the "invoices" table
+    // Insert EXISTING INVOICE DATA into the "invoices" table
     const insertedInvoices = await Promise.all(
-      invoices.map(
+      invoices.map(  //invoices found in placeholder-data.js
         (invoice) => client.sql`
         INSERT INTO invoices (customer_id, amount, status, date)
         VALUES (${invoice.customer_id}, ${invoice.amount}, ${invoice.status}, ${invoice.date})
@@ -102,9 +106,9 @@ async function seedCustomers(client) {
 
     console.log(`Created "customers" table`);
 
-    // Insert data into the "customers" table
+    // Insert EXISTING CUSTOMER DATA into the "customers" table
     const insertedCustomers = await Promise.all(
-      customers.map(
+      customers.map( //customers found in placeholder-data.js
         (customer) => client.sql`
         INSERT INTO customers (id, name, email, image_url)
         VALUES (${customer.id}, ${customer.name}, ${customer.email}, ${customer.image_url})
