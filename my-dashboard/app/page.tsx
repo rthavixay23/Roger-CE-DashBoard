@@ -23,11 +23,11 @@ export default function Page() {
           className="flex flex-row justify-content right align-items center"
           alt="Screenshots of the dashboard project showing desktop version"
           />  
-          <p className={` text-xl text-gray-800 md:text-3xl md:leading-normal text-center`}>
+          <div className={` text-xl text-gray-800 md:text-3xl md:leading-normal text-center`}>
           <div className="flex flex-wrap">
   <p><strong className="mr-2">Roger's</strong><br/>Web App Here.</p>
 </div>
-            <strong></strong>
+           
 
             {/* <strong>Welcome to Acme.</strong> This is the example for the{' '}
             <a href="https://nextjs.org/learn/" className="text-blue-500">
@@ -42,7 +42,7 @@ export default function Page() {
             <div className={styles.shape} />
 
             <div className="h-0 w-0 border-b-[30px] border-l-[20px] border-r-[20px] border-b-black border-l-transparent border-r-transparent"/> */}
-          </p>
+          </div>
           <Link
             href="/dashboard"
             className="flex items-center gap-10 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
