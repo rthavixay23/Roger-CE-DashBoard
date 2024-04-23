@@ -7,6 +7,7 @@ import styles from '@/app/ui/home.module.css';
 import { lusitana } from '@/app/ui/fonts';
 import Image from 'next/image';
 
+
 export default function Page() {
   return (
     //These are Tailwind Classes
@@ -23,9 +24,9 @@ export default function Page() {
           className="flex flex-row justify-content right align-items center"
           alt="Screenshots of the dashboard project showing desktop version"
           />  
-          <div className={` text-xl text-gray-800 md:text-3xl md:leading-normal text-center`}>
+          <div className={"text-xl text-gray-800 md:text-3xl md:leading-normal text-center"}>
           <div className="flex flex-wrap">
-  <p><strong className="mr-2">Roger's</strong><br/>Web App Here.</p>
+  <p><strong className="mr-2">Rogers</strong><br/>Web App Here.</p>
 </div>
            
 
