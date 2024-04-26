@@ -1,4 +1,8 @@
-import { sql } from '@vercel/postgres';
+// If using own database provider in chapter 6, need to update database queries to work with my provider.
+// Find Queries below...
+
+
+import { sql } from '@vercel/postgres'; //This function allows you to query your database.
 import {
   CustomerField,
   CustomersTableType,
@@ -32,6 +36,7 @@ export async function fetchRevenue() {
   }
 }
 
+//Fetch the last 5 invoices, sorted by date
 export async function fetchLatestInvoices() {
   try {
     const data = await sql<LatestInvoiceRaw>`

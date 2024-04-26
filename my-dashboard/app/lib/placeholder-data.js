@@ -30,8 +30,8 @@ const customers = [
   },
   {
     id: '50ca3e18-62cd-11ee-8c99-0242ac120002',
-    name: 'Steven Tey',
-    email: 'steven@tey.com',
+    name: 'Dewey Siyarath',
+    email: 'Dewey Siyarath@RiseGrindandShine.com',
     image_url: '/customers/steven-tey.png',
   },
   {
